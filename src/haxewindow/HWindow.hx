@@ -1,5 +1,6 @@
 package haxewindow;
 
+import sys.*;
 import lime.app.Application;
 import lime.graphics.Image;
 import openfl.Assets;
@@ -8,6 +9,8 @@ import flixel.tweens.FlxEase;
 
 class HWindow
 {
+	var version:String = "1.1.1"; // If you need to get the current version of HWindow, it will be here.
+
 	public static function changeTitle(name:String)
 	{
 		Application.current.window.title = name;
@@ -36,5 +39,10 @@ class HWindow
 				Application.current.window.y += pixels;
 				FlxTween.tween(Application.current.window, {y: Application.current.window.y - pixels}, comebackDur, {ease: FlxEase.quadInOut});
 		}
+	}
+
+	public static function closeWindow()
+	{
+		Sys.exit(0);
 	}
 }

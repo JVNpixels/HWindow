@@ -1,8 +1,8 @@
-<img width="300" height="300" alt="HWindow" src="https://github.com/user-attachments/assets/5adbc38c-8add-4ff6-8944-03632f999b1d" />
+<img width="240" height="235" alt="HWindow" src="https://github.com/user-attachments/assets/d2415456-a4d8-424d-963e-8f17b0912603" />
 
 ---
 
-# HWindow (HaxeWindow) - Version 1.1.0
+# HWindow (HaxeWindow) - Version 1.1.1
 
 A cool HaxeLib that can be used for controlling your game window! Dependent on Lime, OpenFL, and Flixel.
 

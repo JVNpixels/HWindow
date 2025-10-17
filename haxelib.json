@@ -4,9 +4,9 @@
   "license": "MIT",
   "tags": ["window", "cool", "flixel", "game"],
   "description": "This library can be used to do cool stuff to a game window!",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "classPath": "src/",
-  "releasenote": "Added README.md + GitHub Repository.",
+  "releasenote": "Scale Function + More Flexibility On Bounce Window Function + Close Function",
   "contributors": ["JVN-Pixels"],
   "dependencies": {
     "flixel": "",
