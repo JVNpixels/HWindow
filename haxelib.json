@@ -4,7 +4,7 @@
   "license": "MIT",
   "tags": ["window", "cool", "flixel", "game"],
   "description": "This library can be used to do cool stuff to a game window!",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "classPath": "src/",
   "releasenote": "Added README.md + GitHub Repository.",
   "contributors": ["JVN-Pixels"],
