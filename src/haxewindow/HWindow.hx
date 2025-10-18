@@ -6,10 +6,11 @@ import lime.graphics.Image;
 import openfl.Assets;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import openfl.display.NativeWindow;
 
 class HWindow
 {
-	var version:String = "1.1.1"; // If you need to get the current version of HWindow, it will be here.
+	var version:String = "1.1.2"; // If you need to get the current version of HWindow, it will be here.
 
 	public static function changeTitle(name:String)
 	{
@@ -28,21 +29,33 @@ class HWindow
         Application.current.window.setIcon(icon);
 	}
 
-	public static function bounceWindow(direction:String, pixels:Int, comebackDur:Float)
+	public static function offsetWindow(xOffset:Int, yOffset:Int)
+	{
+		Application.current.window.x += xOffset;
+		Application.current.window.y += yOffset;
+	}
+
+	public static function bounceWindow(direction:String, pixels:Int, comebackDur:Float, easeType:EaseFunction)
 	{
 		switch (direction)
 		{
 			case "VERTICAL":
 				Application.current.window.x += pixels;
-				FlxTween.tween(Application.current.window, {x: Application.current.window.x - pixels}, comebackDur, {ease: FlxEase.quadInOut});
+				FlxTween.tween(Application.current.window, {x: Application.current.window.x - pixels}, dur, {ease: easeType});
 			case "HORIZONTAL":
 				Application.current.window.y += pixels;
-				FlxTween.tween(Application.current.window, {y: Application.current.window.y - pixels}, comebackDur, {ease: FlxEase.quadInOut});
+				FlxTween.tween(Application.current.window, {y: Application.current.window.y - pixels}, dur, {ease: easeType});
 		}
 	}
 
-	public static function closeWindow()
+	public static function minimize()
 	{
-		Sys.exit(0);
+		var mainWindow:NativeWindow = Application.current.window;
+		mainWindow.minimize();
+	}
+
+	public static function closeWindow(code = 0)
+	{
+		Sys.exit(code);
 	}
 }

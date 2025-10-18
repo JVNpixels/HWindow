@@ -2,7 +2,7 @@
 
 ---
 
-# HWindow (HaxeWindow) - Version 1.1.1
+# HWindow (HaxeWindow) - Version 1.1.2
 
 A cool HaxeLib that can be used for controlling your game window! Dependent on Lime, OpenFL, and Flixel.
 
